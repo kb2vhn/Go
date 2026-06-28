@@ -1,5 +1,5 @@
 // copy-example Black Hat Go book
-
+// unlike us implementing the io-example this will continue until interupted.
 package main
 
 import(

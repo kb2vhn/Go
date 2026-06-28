@@ -1,4 +1,4 @@
-// Inspired by the Blackhatgo book ref to code int the book is at the following
+// Inspired by the Black Hat Go book ref to code in the book is at the following
 // https://nostarch.com/blackhatgo 
 package main
 

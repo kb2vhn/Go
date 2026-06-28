@@ -13,7 +13,7 @@ func echo(conn net.Conn) {
 	defer conn.Close()
 	
 	// Create a buffer to store recieved data.
-	b := make([]byte, 512)
+	b := make([]byte, 512) // if you go over the buffer there is some strange artifacts still printed at the server each time.
 	for {
 		// Recieved data via conn.Read into a buffer.
 		size, err := conn.Read(b[0:])
@@ -37,11 +37,11 @@ func echo(conn net.Conn) {
 
 func main() {
 	// Bind to tcp port 20080 on all interfaces
-	listener, err := net.Listen("tcp", ":20080")
+	listener, err := net.Listen("tcp", ":53") // wanted to try a port that usually requires root
 	if err != nil {
 		log.Fatalln("Unable to bind to port")
 	}
-	log.Println("Listening on 0.0.0.0:20080")
+	log.Println("Listening on 0.0.0.0:53")
 	for {
 		// Wait for conneciton. Create net.Conn on connection established
 		conn, err := listener.Accept()

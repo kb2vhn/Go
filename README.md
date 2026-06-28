@@ -1,7 +1,7 @@
 # Go
 Go Tools
 I'm taking the code as a building block from the Black Hat Go book by Tom Steele, Chris, Pattern, and Dan Kottmann from No Starch Press
-
+The Github that the book referneces is https://github.com/blackhat-go/bhg
 
 I have noticed a few things with the example code that i will be looking at after each chapter or concept.
 

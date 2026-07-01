@@ -23,7 +23,7 @@ func worker(ports, results chan int) {
 }
 
 func main() {
-	ports := make(chan int, 128)
+	ports := make(chan int, 100)
 	results := make(chan int)
 	var openports []int
 
@@ -32,14 +32,14 @@ func main() {
 	}
 
 	go func() {
-		for i := 1; i <= 65535; i++{
+		for i := 1; i <= 1024; i++{
 			ports <- i
 		}
 	}()
 
 
 
-		for i := 1; i <= 65535; i++ {
+		for i := 1; i <= 1024; i++ {
 			port := <-results
 			if port != 0 {
 				openports = append(openports, port)
